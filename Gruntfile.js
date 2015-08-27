@@ -20,15 +20,21 @@ module.exports = function(grunt) {
 
   timer.init(grunt, { deferLogs: true, friendlyTime: true, color: "blue" });
 
-  // Load all modules here
+  // Load all grunt modules here
 
    grunt.loadNpmTasks('grunt-contrib-less');
    grunt.loadNpmTasks('grunt-contrib-jshint');
+   grunt.loadNpmTasks('grunt-contrib-clean');
   
 
    grunt.initConfig({
 
     config: Oven.config,
+
+
+    clean: {
+        css: ["<%= config.buildCssDir %>/*.css"]
+    },
 
     less: {
             production: {
@@ -51,6 +57,6 @@ module.exports = function(grunt) {
   });
 
     grunt.registerTask('default' ,'build');
-    grunt.registerTask('build', ['less','jshint']);
+    grunt.registerTask('build', ['clean','less','jshint']);
 
 };

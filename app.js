@@ -1,3 +1,4 @@
+"use strict" ;
 var express  = require('express'),
     app      = express(),
     config   = require('./src/config/config'),
@@ -5,9 +6,7 @@ var express  = require('express'),
     router   = require('./src/controllers/index');
 
 app.use(express.static(__dirname + '/public'));
-
-
-app.use('/',router);
+app.use(router);
 
 
 // template setting : We are using swig
