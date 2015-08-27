@@ -5,7 +5,9 @@
     "start": "supervisor app.js"
   },
   "dependencies": {
+    "body-parser": "^1.13.3",
     "express": "^4.13.3",
+    "express-session": "^1.11.3",
     "swig": "^1.4.2"
   },
   "devDependencies": {
