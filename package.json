@@ -1,10 +1,17 @@
 {
-  "name": "Simple Node app",
+  "name": "Simple-node-app",
   "version": "0.0.1",
-  "scripts":{
-    "start" : "supervisor app.js"
-   },
+  "scripts": {
+    "start": "supervisor app.js"
+  },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-timer": "^0.6.0",
+    "jshint-stylish": "^2.0.1"
   }
 }
